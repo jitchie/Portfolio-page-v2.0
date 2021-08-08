@@ -1,0 +1,67 @@
+
+/*Nav bar styling*/
+
+
+nav ul {
+  padding: 10px;
+  overflow: hidden;
+  border-bottom: dotted 1px grey;
+  
+}
+
+nav ul li {
+  list-style: none;
+  display: flex;
+  float: right;
+  font-family: 'Lekton', sans-serif;
+  font-size: 24px;
+  padding: 10px;
+  margin: 5px;
+
+  }
+  /* set the "stage" for animation */
+  .stage{
+    display: flex;
+    justify-content: flex-end;
+    height: 77px;
+    width: 100%;
+  }
+    /* control how many/how smooth animations are */
+  .social-link{
+    border: 1px solid black;
+    border-radius: 30px;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    transform-origin: bottom;
+  }
+  /
+  .social-link:hover {
+    color: grey;
+    border-color: grey;
+  }
+
+  #link-1 {
+    animation-name: social-link;
+    animation-timing-function: linear;
+    animation-delay: .5s;
+
+}
+#link-2 {
+  animation-name: social-link;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+
+}
+#link-3 {
+  animation-name: social-link;
+  animation-timing-function: linear;
+  animation-delay: 1.5s;
+
+}
+
+@keyframes social-link {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-010px); }
+    100% { transform: translateY(0); }
+}
+
