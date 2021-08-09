@@ -19,14 +19,25 @@ nav ul li {
   margin: 5px;
 
   }
+
   /* set the "stage" for animation */
   .stage{
     display: flex;
     justify-content: flex-end;
+    padding-right: 22px;
     height: 77px;
     width: 100%;
   }
-    /* control how many/how smooth animations are */
+  .topnav{
+    display: flex;
+    padding-left:20px;
+    height: 77px;
+    width: 100%;
+    border-bottom: dotted 1px grey;
+    
+    
+  }
+    /* control how many/how smooth animations move {nav link}*/
   .social-link{
     border: 1px solid black;
     border-radius: 30px;
@@ -34,7 +45,7 @@ nav ul li {
     animation-iteration-count: 1;
     transform-origin: bottom;
   }
-  /
+  
   .social-link:hover {
     color: grey;
     border-color: grey;
@@ -60,8 +71,45 @@ nav ul li {
 }
 
 @keyframes social-link {
-    0%   { transform: translateY(0); }
     50%  { transform: translateY(-010px); }
-    100% { transform: translateY(0); }
+
 }
 
+/* svg icon movement */
+
+.topnav img {
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+
+}
+
+#icon-svg {
+  animation-name: svg-icon;
+  animation-delay: .02s;
+
+}
+
+@keyframes svg-icon {
+  30%  { transform: translateX(-012px); }
+}
+
+/* media query iPhone x */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3) {
+      .stage{
+        flex-direction: column;
+        height: fit-content;
+        
+      }
+      #link-1, #link-2, #link-3{
+        animation-name: none;
+      }
+      .topnav{
+        border: none;
+      }
+      .topnav img{
+        display: none;
+      }
+  }
