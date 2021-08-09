@@ -1,0 +1,19 @@
+.mobnav ul li{
+ list-style: none;
+}
+
+mobnav.mobile-nav {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 85%;
+  background: #000;
+  color: #fff;
+  padding: 30px;
+  transform: translateX(-100%);
+  transition: all 300ms;
+}
+
+.mobile-show {
+  transform: translateX(0) !important;
+}

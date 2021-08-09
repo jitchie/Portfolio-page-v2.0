@@ -2,10 +2,9 @@
 /*Nav bar styling*/
 
 
+
 nav ul {
   padding: 10px;
-  overflow: hidden;
-  border-bottom: dotted 1px grey;
   
 }
 
@@ -27,6 +26,7 @@ nav ul li {
     padding-right: 22px;
     height: 77px;
     width: 100%;
+    
   }
   .topnav{
     display: flex;
@@ -36,6 +36,10 @@ nav ul li {
     border-bottom: dotted 1px grey;
     
     
+  }
+
+  .hamburger {
+    display: none;
   }
     /* control how many/how smooth animations move {nav link}*/
   .social-link{
@@ -98,18 +102,7 @@ nav ul li {
   and (min-device-width: 375px) 
   and (max-device-width: 812px) 
   and (-webkit-min-device-pixel-ratio: 3) {
-      .stage{
-        flex-direction: column;
-        height: fit-content;
-        
-      }
       #link-1, #link-2, #link-3{
-        animation-name: none;
-      }
-      .topnav{
-        border: none;
-      }
-      .topnav img{
         display: none;
       }
   }

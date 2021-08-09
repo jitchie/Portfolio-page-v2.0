@@ -12,6 +12,7 @@
     />
     <link href="./reset.css" rel="stylesheet" />
     <link href="./styles.css" rel="stylesheet" />
+    <link href="./mobile.css" rel="stylesheet" />
 
     <title>Jack's Portfolio</title>
   </head>
@@ -53,7 +54,30 @@
       <div class="main-wrapper">
         <section class="container"></section>
       </div>
-      <script type="text/javascript" src="./index.js"></script>
+      <!--- mobile navigation --->
+      <mobnav class="mobile-nav" id="mobile-nav">
+        <ul>
+          <li><a href="http://www.github.com/jitchie">Github</a></li>
+          <li>
+            <a href="https://www.linkedin.com/in/jack-ritchie-362416108/"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://www.instagram.com/jackritchie.co">Instagram</a>
+          </li>
+        </ul>
+      </mobnav>
     </body>
+    <script>
+      var element = document.getElementById("mobile-nav");
+      document
+        .getElementById("icon-svg")
+        .addEventListener("click", function () {
+          if (screen.width < 769) {
+            element.classList.add("mobile-show");
+          }
+        });
+    </script>
   </main>
 </html>
