@@ -67,10 +67,19 @@
             <a href="https://www.instagram.com/jackritchie.co">Instagram</a>
           </li>
         </ul>
+        <div>
+          <img
+            src="./assets/cancel.png"
+            alt="exit mobile menu"
+            id="exit-mobile-menu-png"
+            class="mobile-nav"
+          />
+        </div>
       </mobnav>
     </body>
     <script>
       var element = document.getElementById("mobile-nav");
+      let exit = document.getElementById("exit-mobile-menu-png");
       document
         .getElementById("icon-svg")
         .addEventListener("click", function () {
@@ -78,6 +87,10 @@
             element.classList.add("mobile-show");
           }
         });
+
+      exit.addEventListener("click", function () {
+        element.classList.remove("mobile-show");
+      });
     </script>
   </main>
 </html>
