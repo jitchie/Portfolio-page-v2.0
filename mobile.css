@@ -1,11 +1,9 @@
-.mobnav ul li{
- list-style: none;
-}
+
 
 mobnav.mobile-nav {
   position: fixed;
   top: 20;
-  height: 100%;
+  height: 25%;
   width: 85%;
   background:whitesmoke;
   color:grey ;
@@ -19,10 +17,29 @@ mobnav.mobile-nav img{
   transition: all 300ms;
   height: 20px;
   width: 20px;
-  position: relative;
-  left: 270px;
-  top: -55px;
+  position: absolute;
+  right: 0;
+  top: 20px;
 }
+
+mobnav.mobile-nav ul {
+  text-align: center;
+  padding-top: 22px;
+  /* float: left; */
+  
+  
+  
+}
+mobnav.mobile-nav ul li{
+  padding:6px;
+  margin-bottom: 12px;
+  border: 1px dotted #0e1111;
+  border-radius: 20px;
+  
+  
+}
+
+
 
 .mobile-show {
   transform: translateX(0) !important;
