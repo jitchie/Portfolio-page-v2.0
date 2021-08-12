@@ -106,3 +106,42 @@ nav ul li {
         display: none;
       }
   }
+
+  /* fluid text*/
+
+  .fluid-text {
+    width: 1920px;
+    height: 19px;
+    overflow: hidden;
+  }
+
+  #scroll-text {
+    padding: 2px;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+  -moz-animation: header-text 45s linear 1;
+  -webkit-animation: header-text 45s linear 1;
+  animation: header-text 45s linear 1;
+  }
+
+
+/* for Chrome */
+@-webkit-keyframes header-text {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes header-text {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
